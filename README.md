@@ -1,5 +1,7 @@
 #linux
 export PATH=$PATH:$HOME/usr/bin
 
-# *etc*
-# *etc/profile.d*
+#*etc*
+#*etc/profile.d*
+#*etc/profile.d/env*
+
