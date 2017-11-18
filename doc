@@ -101,7 +101,7 @@ Host *
 vi /etc/ssh/ssh_config
 SendEnv LANG LC_* #:wq!
 
-#wget 
+#wget http://www.example.com
 #curl -fsSL "http://www.example.com" -O ~/Desktop
 #chomod a+x ~/Desktop
 
@@ -123,6 +123,44 @@ sudo ntpdate jp.pool.ntp.org
 sudo servicentpd start
 
 
+#cetos
+/etc/sysconfig/network-scripts/ifcfg-eth1
+DEVICE=eth1
+BOOTPROTO=static
+ONBOOT=yes
+IPADDR=192.168.33.10
+NETMASK=225.225.225.0
+NETWORK= 192.168.99.10
+$ifup eth1
+$ifconfig eth1
+#ubuntu
+#/etc/network/interfaces
+auto eth1
+iface eth1 inet static
+address 192.168.33.1
+netmask 225.225.225.0
+$sudo /etc/init.d/networking stop
+$sudo start networking
+$ifconfig etn1
+#hosts
+#win: /etc/hosts
+#ubuntu /etc/hosts
+vi /etc/hosts
+:$
+192.168.33.1 #:wq!
+ssh tky@192.168.33.1
 
-
-
+#centos
+ifup eth0
+yum -y install git
+.etc/sysconfig/network-scripts/ifcfg-eth0
+ONBOO="no"
+#
+useradd -m tky
+passwd tky
+#
+#/etc/sudoers.d/00_wheel
+%wheel ALL=(ALL) ALL
+chomd 400 /etc/suders.d/00_wheel
+gpasswd -a tky wheel
+shutdown -h now
