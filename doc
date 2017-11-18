@@ -1,0 +1,128 @@
+#output, cat --> file
+ls -A > output.sh
+cat profile >> profile1
+#input, <-- Enter
+mysql -u root sample_production < backup.sql
+
+# |, output --> input -->
+ip a | grep inet
+tail -f /var/log/mail.log | grep tky
+
+
+#process, less ps
+ps aux | less
+kill -KILL 1076
+
+#socket
+/tmp/mysql.sock
+
+
+#inscure private key
+mkdir /home/vagrant/.ssh
+chmod 700 /home/vagrant/.ssh
+cd /home/vagrant/.ssh
+wget --no-check-certificate 'https://raw.github.com/mitchelh/vagrant/master/ kyes/vagrant.pub' -O authorized_keys
+chmod 600 /home/.ssh/authorized_keys #chmod ug+rw /etc/profile, u:owner, g:group
+                                     #chmod o-x /etc/bash.bashrc, o:other
+chown -R vatrant /home/vagrant/.ssh #chown -R tky /etc/profile
+
+#permition status
+ls -l bash.bashrc
+
+
+#ls, status
+ls -a
+ls -R
+ls -l
+
+#pwd
+
+#lookup
+find nginx
+which ruby
+
+#+x, reload
+source ~/bash.bashrc
+
+#env
+export PATH=$PATH:$HOME/usr/bin
+echo $PATH
+unset PATH
+
+
+#ln -sf
+ln -sf /etc/host config
+
+##locale
+
+#/etc/ssh/ssh_config
+#/etc/hosts
+#...
+#/etc/vimrc
+#/etc/bash.bashrc
+#/etc/profile
+#/etc/bash.bash_logout
+#/etc/profile.d/bash_profile.sh
+#...
+#/etc/profile.d/enc.sh
+
+
+#~: /c/Users/tky/.
+#.: currentdir
+#/: rootdir
+
+#~/.ssh/id_rsa
+#
+/* ssh-keygen -t rsa -C "example@gmail.com"*/
+
+#scp
+scp ~/.ssh/id_rsa.pub git@github.com:
+ssh git@github.com
+mkdir -p -m 700 .ssh
+cat id_rsa.pub >> .ssh/authorized_keys
+chmod 600 .ssh/authorized_keys
+rm id_rsa.pub
+#ssh-add
+vi ~/profile
+eval 'ssh-agent' #:wq!
+ssh-add
+Enter passphrase for /c/Users/tky/.ssh/id_rsa: 
+#
+vi ~/.ssh/config
+Host takagotch.com
+  User tky
+  Port 22
+Host *
+  ForwardAgent yes
+  ServerAliveInterval 300
+#
+/etc/ssh_config
+~/.ssh/config
+vi /etc/ssh/ssh_config
+SendEnv LANG LC_* #:wq!
+
+#wget 
+#curl -fsSL "http://www.example.com" -O ~/Desktop
+#chomod a+x ~/Desktop
+
+#service on
+chkconfig --list
+sudo chkconfig httpd on
+sudo chkconfig httpd off
+
+sudo service postgresql-9.1 start
+sudo service sshd stats
+sudo service ssh status
+
+#ntp
+sudo yum -y install ntp
+sudo chkconfig ntpd on
+sudo chkconfig ntpdate on
+sudo service ntpd stop
+sudo ntpdate jp.pool.ntp.org
+sudo servicentpd start
+
+
+
+
+
