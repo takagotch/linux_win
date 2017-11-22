@@ -8,6 +8,8 @@ mysql -u root sample_production < backup.sql
 ip a | grep inet
 tail -f /var/log/mail.log | grep tky
 
+#
+mkdir -p
 
 #process, less ps
 ps aux | less
