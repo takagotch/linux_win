@@ -11,6 +11,11 @@ export PATH=$PATH:$HOME/usr/bin
 ### *etc/profile.d/env*
 
 
+---
+#### cd /
+#### . | cd (./c/users/tky/)
+#### cd c (C: localdisk)
+
 
 
 
